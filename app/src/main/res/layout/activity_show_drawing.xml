@@ -8,7 +8,7 @@
     tools:context=".activities.ShowDrawingActivity">
 
     <ImageView
-        android:id="@+id/image"
+        android:id="@+id/text"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:rotationX="180"

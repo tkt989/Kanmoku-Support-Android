@@ -9,6 +9,7 @@ import android.util.Log
 import androidx.core.content.FileProvider
 import info.tkt989.kanmokusupport.BuildConfig
 import info.tkt989.kanmokusupport.R
+import info.tkt989.kanmokusupport.extensions.toUri
 import kotlinx.android.synthetic.main.activity_drawing.*
 import java.io.File
 import java.io.FileOutputStream
@@ -25,17 +26,8 @@ class DrawingActivity : AppCompatActivity() {
 
         show.setOnClickListener {
             val intent = Intent(this, ShowDrawingActivity::class.java)
-            intent.putExtra("bitmap", bitmapToUri(drawing.getBitmap()))
+            intent.putExtra("bitmap", drawing.getBitmap().toUri(this))
             startActivity(intent)
         }
-    }
-
-    private fun bitmapToUri(bitmap: Bitmap): Uri {
-        val fileName: String = System.currentTimeMillis().toString() + ".jpg"
-        val file = File(cacheDir, fileName)
-        val fileOutputStream = FileOutputStream(file)
-        bitmap.compress(Bitmap.CompressFormat.JPEG, 100, fileOutputStream)
-        fileOutputStream.close()
-        return Uri.fromFile(file)
     }
 }

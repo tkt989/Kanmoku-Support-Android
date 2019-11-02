@@ -3,22 +3,36 @@
     package="info.tkt989.kanmokusupport">
 
     <application
+        android:name=".MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
+        android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activities.ShowIllustActivity"
-            android:theme="@style/FullscreenTheme"></activity>
-        <activity android:name=".activities.IllustSelectActivity" />
+        <activity android:name=".activities.TemplatesActivity"
+            android:screenOrientation="sensorPortrait"></activity>
+        <activity
+            android:name=".activities.ShowTextActivity"
+            android:screenOrientation="sensorPortrait"
+            android:theme="@style/FullscreenTheme" />
+        <activity android:name=".activities.WritingActivity" />
+        <activity
+            android:name=".activities.ShowIllustActivity"
+            android:screenOrientation="sensorPortrait"
+            android:theme="@style/FullscreenTheme" />
+        <activity android:name=".activities.IllustSelectActivity"
+            android:screenOrientation="sensorPortrait"/>
         <activity
             android:name=".activities.ShowDrawingActivity"
+            android:screenOrientation="sensorPortrait"
             android:theme="@style/FullscreenTheme" />
         <activity
             android:name=".activities.DrawingActivity"
+            android:screenOrientation="sensorPortrait"
             android:theme="@style/FullscreenTheme" />
-        <activity android:name=".MenuActivity">
+        <activity android:name=".MenuActivity"
+            android:screenOrientation="sensorPortrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

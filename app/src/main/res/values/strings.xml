@@ -1,3 +1,14 @@
 <resources>
-    <string name="app_name">KanmokuSupport</string>
+    <string name="app_name">コミュサポ</string>
+    <string name="store_url">https://play.google.com/store/apps/details?id=info.tkt989.kanmokusupport</string>
+    <string name="email">tkt989.dev@gmail.com</string>
+    <string name="rate_message">このアプリに満足していただけましたか？</string>
+    <string name="rate_positive">はい</string>
+    <string name="rate_negative">いいえ</string>
+    <string name="rate_review_message">よろしければストアで\nレビューしていただけないでしょうか？</string>
+    <string name="rate_review_positive">レビューする</string>
+    <string name="rate_review_negative">結構です</string>
+    <string name="rate_feedback_message">改善点や要望を送信しますか？</string>
+    <string name="rate_feedback_positive">送信する</string>
+    <string name="rate_feedback_negative">結構です</string>
 </resources>

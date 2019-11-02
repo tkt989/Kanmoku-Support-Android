@@ -1,0 +1,56 @@
+[
+        {
+            "title": "あいさつ",
+            "templates": [
+                {
+                    "content": "おはようございます"
+                },
+                {
+                    "content": "こんにちは"
+                },
+                {
+                    "content": "こんばんは"
+                },
+                {
+                    "content": "よろしくおねがいします"
+                }
+            ]
+        },
+        {
+            "title": "応答",
+            "templates": [
+                {
+                    "content": "はい"
+                },
+                {
+                    "content": "いいえ"
+                },
+                {
+                    "content": "ありがとうございます"
+                },
+                {
+                    "content": "わかりました"
+                },
+                {
+                    "content": "わかりません"
+                }
+            ]
+        },
+        {
+            "title": "感情",
+            "templates": [
+                {
+                    "content": "うれしいです"
+                },
+                {
+                    "content": "かなしいです"
+                },
+                {
+                    "content": "たのしいです"
+                },
+                {
+                    "content": "きもちいいです"
+                }
+            ]
+        }
+    ]

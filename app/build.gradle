@@ -10,8 +10,8 @@ android {
         applicationId "info.tkt989.kanmokusupport"
         minSdkVersion 23
         targetSdkVersion 28
-        versionCode 1
-        versionName "1.0"
+        versionCode 3
+        versionName "1.1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -34,4 +34,7 @@ dependencies {
     implementation 'com.github.divyanshub024:AndroidDraw:v0.1'
     implementation 'com.google.android:flexbox:1.1.0'
     implementation 'androidx.recyclerview:recyclerview:1.0.0'
+    implementation 'com.fasterxml.jackson.module:jackson-module-kotlin:2.9.+'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'jp.co.runners:rateorfeedback:0.0.2'
 }

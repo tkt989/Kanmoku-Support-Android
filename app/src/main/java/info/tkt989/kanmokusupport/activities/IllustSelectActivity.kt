@@ -8,6 +8,7 @@ import android.os.Bundle
 import androidx.core.graphics.drawable.toBitmap
 import androidx.recyclerview.widget.GridLayoutManager
 import info.tkt989.kanmokusupport.R
+import info.tkt989.kanmokusupport.extensions.toUri
 import info.tkt989.kanmokusupport.views.IllustAdapter
 import kotlinx.android.synthetic.main.activity_drawing.*
 import kotlinx.android.synthetic.main.activity_illust_select.*
@@ -39,17 +40,8 @@ class IllustSelectActivity : AppCompatActivity() {
             val intent = Intent(this, ShowIllustActivity::class.java)
             val bitmap = image.drawable.toBitmap()
             bitmap.setHasAlpha(true)
-            intent.putExtra("bitmap", bitmapToUri(bitmap))
+            intent.putExtra("bitmap", bitmap.toUri(this))
             startActivity(intent)
         }
-    }
-
-    private fun bitmapToUri(bitmap: Bitmap): Uri {
-        val fileName: String = System.currentTimeMillis().toString() + ".png"
-        val file = File(cacheDir, fileName)
-        val fileOutputStream = FileOutputStream(file)
-        bitmap.compress(Bitmap.CompressFormat.PNG, 100, fileOutputStream)
-        fileOutputStream.close()
-        return Uri.fromFile(file)
     }
 }
