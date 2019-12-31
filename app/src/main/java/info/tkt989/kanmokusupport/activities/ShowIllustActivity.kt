@@ -13,7 +13,7 @@ class ShowIllustActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_show_illust)
 
-        text.setImageBitmap(MediaStore.Images.Media.getBitmap(contentResolver, intent?.extras?.get("bitmap") as Uri?))
+        text.setImageResource(intent?.extras?.get("resId") as Int)
 
         back.setOnClickListener { finish() }    }
 }

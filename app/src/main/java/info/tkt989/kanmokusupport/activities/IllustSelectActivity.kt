@@ -2,6 +2,7 @@ package info.tkt989.kanmokusupport.activities
 
 import android.content.Intent
 import android.graphics.Bitmap
+import android.graphics.Color
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -36,11 +37,11 @@ class IllustSelectActivity : AppCompatActivity() {
         list.layoutManager = GridLayoutManager(this, 2)
         list.adapter = adapter
 
-        adapter.listener = { image ->
-            val intent = Intent(this, ShowIllustActivity::class.java)
+        adapter.listener = { image, resId ->
+            image.setBackgroundColor(Color.WHITE)
             val bitmap = image.drawable.toBitmap()
-            bitmap.setHasAlpha(true)
-            intent.putExtra("bitmap", bitmap.toUri(this))
+            val intent = Intent(this, ShowIllustActivity::class.java)
+            intent.putExtra("resId", resId)
             startActivity(intent)
         }
     }
