@@ -8,6 +8,7 @@ import android.os.Bundle
 import androidx.core.content.res.ResourcesCompat
 import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
 import com.fasterxml.jackson.module.kotlin.readValue
+import com.google.firebase.analytics.FirebaseAnalytics
 import info.tkt989.kanmokusupport.activities.DrawingActivity
 import info.tkt989.kanmokusupport.activities.IllustSelectActivity
 import info.tkt989.kanmokusupport.activities.TemplatesActivity
@@ -17,10 +18,13 @@ import jp.co.runners.rateorfeedback.RateOrFeedback
 import kotlinx.android.synthetic.main.activity_menu.*
 
 class MenuActivity : AppCompatActivity() {
+    private lateinit var firebaseAnalytics: FirebaseAnalytics
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_menu)
+
+        firebaseAnalytics = FirebaseAnalytics.getInstance(this)
 
         if ((application as MyApplication)?.launchCount == 10) {
             RateOrFeedback(this)
