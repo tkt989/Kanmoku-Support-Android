@@ -8,10 +8,9 @@ import android.os.Bundle
 import androidx.core.graphics.drawable.toBitmap
 import androidx.recyclerview.widget.GridLayoutManager
 import info.tkt989.kanmokusupport.R
+import info.tkt989.kanmokusupport.databinding.ActivityIllustSelectBinding
 import info.tkt989.kanmokusupport.extensions.toUri
 import info.tkt989.kanmokusupport.views.IllustAdapter
-import kotlinx.android.synthetic.main.activity_drawing.*
-import kotlinx.android.synthetic.main.activity_illust_select.*
 import java.io.File
 import java.io.FileOutputStream
 
@@ -28,13 +27,16 @@ class IllustSelectActivity : AppCompatActivity() {
         R.drawable.face9
     )
 
+    private lateinit var binding: ActivityIllustSelectBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_illust_select)
+        binding = ActivityIllustSelectBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         val adapter = IllustAdapter(this, this.illustList)
-        list.layoutManager = GridLayoutManager(this, 2)
-        list.adapter = adapter
+        binding.list.layoutManager = GridLayoutManager(this, 2)
+        binding.list.adapter = adapter
 
         adapter.listener = { image ->
             val intent = Intent(this, ShowIllustActivity::class.java)

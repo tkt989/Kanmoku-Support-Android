@@ -6,22 +6,26 @@ import android.os.Bundle
 import android.provider.MediaStore
 import info.tkt989.kanmokusupport.MyApplication
 import info.tkt989.kanmokusupport.R
+import info.tkt989.kanmokusupport.databinding.ActivityDrawingBinding
+import info.tkt989.kanmokusupport.databinding.ActivityShowDrawingBinding
 import info.tkt989.kanmokusupport.models.Direction
-import kotlinx.android.synthetic.main.activity_show_drawing.*
 
 class ShowDrawingActivity : AppCompatActivity() {
 
+    private lateinit var binding: ActivityShowDrawingBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_show_drawing)
+        binding = ActivityShowDrawingBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         val app = application as MyApplication
 
-        text.setImageBitmap(MediaStore.Images.Media.getBitmap(contentResolver, intent?.extras?.get("bitmap") as Uri?))
+        binding.text.setImageBitmap(MediaStore.Images.Media.getBitmap(contentResolver, intent?.extras?.get("bitmap") as Uri?))
 
-        back.setOnClickListener { finish() }
+        binding.back.setOnClickListener { finish() }
 
-        rotate.setOnClickListener {
+        binding.rotate.setOnClickListener {
             if (app.prefsService.showDirection == Direction.NORMAL) {
                 app.prefsService.showDirection = Direction.REVERSE
             } else {
@@ -35,11 +39,11 @@ class ShowDrawingActivity : AppCompatActivity() {
 
     private fun updateShowDirection(showDirection: Direction) {
         if (showDirection == Direction.NORMAL) {
-            text.rotationX = 0.0f
-            text.rotationY = 0.0f
+            binding.text.rotationX = 0.0f
+            binding.text.rotationY = 0.0f
         } else {
-            text.rotationX = 180.0f
-            text.rotationY = 180.0f
+            binding.text.rotationX = 180.0f
+            binding.text.rotationY = 180.0f
         }
     }
 }

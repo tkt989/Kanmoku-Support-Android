@@ -5,15 +5,19 @@ import android.util.AttributeSet
 import android.view.LayoutInflater
 import androidx.constraintlayout.widget.ConstraintLayout
 import info.tkt989.kanmokusupport.R
-import kotlinx.android.synthetic.main.view_menu_button.view.*
+import info.tkt989.kanmokusupport.databinding.ViewMenuButtonBinding
 
 class MenuButton(context: Context, attrs: AttributeSet?) : ConstraintLayout(context, attrs) {
+
+    private var binding: ViewMenuButtonBinding
+
     init {
-        LayoutInflater.from(context).inflate(R.layout.view_menu_button, this)
+        binding = ViewMenuButtonBinding.inflate(LayoutInflater.from(context))
+        addView(binding.root)
 
         context.obtainStyledAttributes(attrs, R.styleable.MenuButton).apply {
-            this@MenuButton.text.text = getString(R.styleable.MenuButton_text)
-            this@MenuButton.image.setImageResource(getResourceId(R.styleable.MenuButton_image, 0))
+            binding.text.text = getString(R.styleable.MenuButton_text)
+            binding.image.setImageResource(getResourceId(R.styleable.MenuButton_image, 0))
 
             recycle()
         }

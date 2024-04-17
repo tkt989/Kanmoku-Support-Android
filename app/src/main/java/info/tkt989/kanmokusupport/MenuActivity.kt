@@ -12,15 +12,18 @@ import info.tkt989.kanmokusupport.activities.DrawingActivity
 import info.tkt989.kanmokusupport.activities.IllustSelectActivity
 import info.tkt989.kanmokusupport.activities.TemplatesActivity
 import info.tkt989.kanmokusupport.activities.WritingActivity
+import info.tkt989.kanmokusupport.databinding.ActivityMenuBinding
 import info.tkt989.kanmokusupport.models.Situation
 import jp.co.runners.rateorfeedback.RateOrFeedback
-import kotlinx.android.synthetic.main.activity_menu.*
 
 class MenuActivity : AppCompatActivity() {
 
+    private lateinit var binding: ActivityMenuBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_menu)
+        binding = ActivityMenuBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         if ((application as MyApplication)?.launchCount == 10) {
             RateOrFeedback(this)
@@ -38,19 +41,19 @@ class MenuActivity : AppCompatActivity() {
                 .show()
         }
 
-        writing.setOnClickListener {
+        binding.writing.setOnClickListener {
             startActivity(Intent(this, WritingActivity::class.java))
         }
 
-        illust.setOnClickListener {
+        binding.illust.setOnClickListener {
             startActivity(Intent(this, IllustSelectActivity::class.java))
         }
 
-        drawing.setOnClickListener {
+        binding.drawing.setOnClickListener {
             startActivity(Intent(this, DrawingActivity::class.java))
         }
 
-        templates.setOnClickListener {
+        binding.templates.setOnClickListener {
             startActivity(Intent(this, TemplatesActivity::class.java))
         }
     }
