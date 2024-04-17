@@ -1,5 +1,3 @@
-import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
-
 apply plugin: 'com.android.application'
 
 apply plugin: 'kotlin-android'
@@ -9,8 +7,8 @@ android {
         applicationId "info.tkt989.kanmokusupport"
         minSdkVersion 23
         targetSdkVersion 34
-        versionCode 3
-        versionName "1.1.0"
+        versionCode 6
+        versionName "1.1.2"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
