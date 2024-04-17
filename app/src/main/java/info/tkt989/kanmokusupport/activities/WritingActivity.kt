@@ -3,7 +3,6 @@ package info.tkt989.kanmokusupport.activities
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import info.tkt989.kanmokusupport.R
 import info.tkt989.kanmokusupport.databinding.ActivityWritingBinding
 import info.tkt989.kanmokusupport.models.TTS
 

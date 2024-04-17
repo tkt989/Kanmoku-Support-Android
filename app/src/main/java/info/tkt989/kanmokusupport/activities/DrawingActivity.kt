@@ -11,8 +11,6 @@ import info.tkt989.kanmokusupport.BuildConfig
 import info.tkt989.kanmokusupport.R
 import info.tkt989.kanmokusupport.databinding.ActivityDrawingBinding
 import info.tkt989.kanmokusupport.extensions.toUri
-import java.io.File
-import java.io.FileOutputStream
 
 class DrawingActivity : AppCompatActivity() {
 

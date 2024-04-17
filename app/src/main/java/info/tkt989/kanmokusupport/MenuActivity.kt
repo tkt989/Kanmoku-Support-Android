@@ -1,19 +1,13 @@
 package info.tkt989.kanmokusupport
 
 import android.content.Intent
-import android.content.res.AssetManager
-import android.content.res.Resources
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.core.content.res.ResourcesCompat
-import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
-import com.fasterxml.jackson.module.kotlin.readValue
 import info.tkt989.kanmokusupport.activities.DrawingActivity
 import info.tkt989.kanmokusupport.activities.IllustSelectActivity
 import info.tkt989.kanmokusupport.activities.TemplatesActivity
 import info.tkt989.kanmokusupport.activities.WritingActivity
 import info.tkt989.kanmokusupport.databinding.ActivityMenuBinding
-import info.tkt989.kanmokusupport.models.Situation
 import jp.co.runners.rateorfeedback.RateOrFeedback
 
 class MenuActivity : AppCompatActivity() {

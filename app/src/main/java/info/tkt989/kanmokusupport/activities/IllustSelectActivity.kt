@@ -1,8 +1,6 @@
 package info.tkt989.kanmokusupport.activities
 
 import android.content.Intent
-import android.graphics.Bitmap
-import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.core.graphics.drawable.toBitmap
@@ -11,8 +9,6 @@ import info.tkt989.kanmokusupport.R
 import info.tkt989.kanmokusupport.databinding.ActivityIllustSelectBinding
 import info.tkt989.kanmokusupport.extensions.toUri
 import info.tkt989.kanmokusupport.views.IllustAdapter
-import java.io.File
-import java.io.FileOutputStream
 
 class IllustSelectActivity : AppCompatActivity() {
     val illustList = listOf(

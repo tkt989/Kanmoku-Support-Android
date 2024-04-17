@@ -5,8 +5,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.MediaStore
 import info.tkt989.kanmokusupport.MyApplication
-import info.tkt989.kanmokusupport.R
-import info.tkt989.kanmokusupport.databinding.ActivityDrawingBinding
 import info.tkt989.kanmokusupport.databinding.ActivityShowDrawingBinding
 import info.tkt989.kanmokusupport.models.Direction
 

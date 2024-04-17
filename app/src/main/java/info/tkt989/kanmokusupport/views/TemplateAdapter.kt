@@ -1,13 +1,9 @@
 package info.tkt989.kanmokusupport.views
 
 import android.content.Context
-import android.graphics.Color
 import android.graphics.Typeface
 import android.view.ViewGroup
-import android.widget.ImageView
 import android.widget.TextView
-import androidx.core.view.MarginLayoutParamsCompat
-import androidx.core.view.marginLeft
 import androidx.recyclerview.widget.RecyclerView
 import info.tkt989.kanmokusupport.models.Situation
 
