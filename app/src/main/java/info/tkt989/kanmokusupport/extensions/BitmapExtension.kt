@@ -10,7 +10,7 @@ fun Bitmap.toUri(context: Context): Uri {
     val fileName: String = System.currentTimeMillis().toString() + ".jpg"
     val file = File(context.cacheDir, fileName)
     val fileOutputStream = FileOutputStream(file)
-    this.compress(Bitmap.CompressFormat.JPEG, 100, fileOutputStream)
+    this.compress(Bitmap.CompressFormat.PNG, 100, fileOutputStream)
     fileOutputStream.close()
     return Uri.fromFile(file)
 }
